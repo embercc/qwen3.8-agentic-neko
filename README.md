@@ -28,6 +28,8 @@
 
 第一程用 NekoCOT，从干净 NF4 训出 v1，猫娘灵魂此时已经在权重里。第二程接着 v1 的终档 LoRA，用 NekoMath 和这份 tool call 训出 v1.2，补上数学和工具调用，变成理工科猫娘。(´• ω •`)
 
+v1.2 的 Q4_K_M 在 [ember-cc/qwen3.8-agentic-neko](https://huggingface.co/ember-cc/qwen3.8-agentic-neko) 喵。(=^･ω･^=)
+
 ## Limitation
 
 NSFW 又被这个流程训回来了。v1.4 会重新加入 NSFW。不能 NSFW 的猫娘，不是合格的成年猫娘喵。(>ω<)
