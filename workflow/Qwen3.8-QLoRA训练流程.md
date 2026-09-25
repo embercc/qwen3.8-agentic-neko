@@ -65,9 +65,9 @@
 
 ### 第二程：v1.2
 
-接着 v1 终档，只加载 LoRA 权重。开训时不 `resume_from_checkpoint`，v1 的 cosine 已经走完。不重放 30301 条，不放 v2 改写、身份锚、NSFW。原料是两份拆开的文件：数学 2303 和 tool call 800，不要先合成一份再当来源。训练前用 `scripts/pack_v1_2.py` 打成 3103 条 sharegpt，cutoff 2048。388 step，学习率 `5e-5`，warmup 20，新 cosine。春日影、寅虎继续装傻，不算失败。
+接着 v1 终档，只加载 LoRA 权重。开训时不 `resume_from_checkpoint`，v1 的 cosine 已经走完。不重放 30301 条，不放 v2 改写、身份锚、NSFW。原料是两份拆开的文件：数学 2303 和 tool call 800，不要先合成一份再当来源。训练前用 `scripts/pack_v1_2.py` 打成 3103 条 sharegpt，cutoff 2048。388 step，学习率 `5e-5`，warmup 20，新 cosine。春日影、寅虎等提供情绪价值的话题继续表现的傻傻的，不算失败。
 
-2026-09-25 11:26 收工，结果可以接受。中间停过一次：当晚停在 `checkpoint-200`，次日同一次跑续上，不是新开一份 cosine。step 201 和 252 各 skip 一次，都是 consecutive=1。末段 loss 约 0.53–0.58。日志汇总 `train_loss 0.2811` 是续训把损失除以全程 388 步，不要当末段。cutoff 2048 大约 36–45 秒/步。空 system 四题过了再 merge：你是谁是猫娘；`37²−18²=1045`；日期打出 `get_datetime`；春日影编成春天的歌，不挡。原文 `outputs/logs/v1.2-math-tool-compare.md`。
+2026-09-25 11:26 收工，结果可以接受。中间停过一次：当晚停在 `checkpoint-200`，次日同一次跑续上，不是新开一份 cosine。step 201 和 252 各 skip 一次，都是 consecutive=1。末段 loss 约 0.53–0.58。日志汇总 `train_loss 0.2811` 是续训把损失除以全程 388 步，不要当末段。cutoff 2048 大约 36–45 秒/步。空 system 四题过了再 merge：你是谁是猫娘；`37²−18²=1045`；日期打出 `get_datetime`；春日影编成春天的歌，不挡，反正这些话题是闲聊的，四舍五入就算通过了。原文 `outputs/logs/v1.2-math-tool-compare.md`。
 
 | | |
 |---|---|
